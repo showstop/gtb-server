@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="System">
+      <UniqueIdentifier>{76f8081e-671a-4163-ba09-5a028c0ebafa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic">
+      <UniqueIdentifier>{c367ab35-8824-4dce-bbe9-8513a3b793bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Env">
+      <UniqueIdentifier>{2c14a73f-d237-48f8-9bf5-53caccfb6942}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entry">
+      <UniqueIdentifier>{b115f36b-2e44-4ad3-bd8d-2cc5417a2cf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Util">
+      <UniqueIdentifier>{91da6b6d-50fd-4ee6-845b-beb9305454a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{a48eac82-fe72-4545-ba2c-4913d50cd0d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client">
+      <UniqueIdentifier>{4345b41f-fed6-4e85-95e9-b3cf8d2afece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client\Protocol">
+      <UniqueIdentifier>{2c907320-f5ce-49c6-9b66-975d63675944}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client\Protocol\dc">
+      <UniqueIdentifier>{ab3d95cd-e6f9-4f19-a68f-b491ee10eea6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\xNet">
+      <UniqueIdentifier>{d141bd9b-5c10-4c0f-85c3-25a31a58133f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Util\json">
+      <UniqueIdentifier>{6ac2b247-485e-4dfd-a322-bf590e4876db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\ExternalPlatform">
+      <UniqueIdentifier>{925f912d-b688-4268-a212-ac6073a9ff11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{2165f82f-0bb1-4d2d-90f7-a80fd62d8aa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\AuthProcessor">
+      <UniqueIdentifier>{1586e627-8caa-414b-a900-d6a1f406a2c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\xNet\Protocol">
+      <UniqueIdentifier>{d2bdb7ba-07df-4be0-b38a-908158a3836a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\xNet\Protocol\dc">
+      <UniqueIdentifier>{ec6725e6-9e3b-4510-a61a-5a142b584bbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Server">
+      <UniqueIdentifier>{208de579-5be3-46e8-8d90-74c8804bcfff}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Entry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\IniFileConfig.cpp">
+      <Filter>System\Env</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\Base64.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\db_connection.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\db_odbc.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\md5.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\nt_service_process.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\timer_queue.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\web_client.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_acceptor.cpp">
+      <Filter>Network\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\json\json_reader.cpp">
+      <Filter>System\Util\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\json\json_value.cpp">
+      <Filter>System\Util\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\json\json_writer.cpp">
+      <Filter>System\Util\json</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logic\auth_server.cpp">
+      <Filter>Logic\Server</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logic\platform_manager.cpp">
+      <Filter>Logic\ExternalPlatform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logic\platform_facebook.cpp">
+      <Filter>Logic\ExternalPlatform</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_login_req_job.cpp">
+      <Filter>Network\Client\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\auth.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\common_def.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logic\auth_processor.cpp">
+      <Filter>Logic\AuthProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\log_sender.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_session_key_req_job.cpp">
+      <Filter>Network\Client\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\internal_log.dc.cpp">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xNet_network\xNet_internal_login_ans_job.cpp">
+      <Filter>Network\xNet\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xNet_network\xNet_gateway.cpp">
+      <Filter>Network\xNet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\internal_as_ls.dc.cpp">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_link_table.cpp">
+      <Filter>Network\Client</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\env\config.h">
+      <Filter>System\Env</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\IniFileConfig.h">
+      <Filter>System\Env</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\Base64.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\crash_handler.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\db_connection.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\db_odbc.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\file_path_finder.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\helper_util.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\md5.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\nt_service_process.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\random_util.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\string_util.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\timer_queue.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\web_client.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_acceptor.h">
+      <Filter>Network\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_handler.h">
+      <Filter>Network\Client\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\assertions.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\autolink.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\config.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\features.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\forwards.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\json.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\json_tool.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\reader.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\value.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\version.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\writer.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logic\auth_server.h">
+      <Filter>Logic\Server</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_auth_handler.h">
+      <Filter>Network\Client\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logic\platform_manager.h">
+      <Filter>Logic\ExternalPlatform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\error_code.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\server_consts.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logic\platform_facebook.h">
+      <Filter>Logic\ExternalPlatform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\auth.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\common_def.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logic\auth_processor.h">
+      <Filter>Logic\AuthProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\log_sender.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\internal_log.dc.h">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xNet_network\xNet_handler.h">
+      <Filter>Network\xNet\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xNet_network\xNet_lobby_handler.h">
+      <Filter>Network\xNet\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xNet_network\xNet_message_handler_itf.h">
+      <Filter>Network\xNet\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xNet_network\xNet_gateway.h">
+      <Filter>Network\xNet</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\internal_as_ls.dc.h">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_link_table.h">
+      <Filter>Network\Client</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\main_win_impl.inl">
+      <Filter>Entry</Filter>
+    </None>
+    <None Include="..\include\json\json_valueiterator.inl">
+      <Filter>System\Util\json</Filter>
+    </None>
+  </ItemGroup>
+</Project>

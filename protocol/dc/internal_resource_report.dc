@@ -1,0 +1,33 @@
+
+package protocol;
+
+enum HardwareResourceKey
+{
+	CPU_USAGE = 1;
+	MEM_USAGE = 2;
+	DISK_USAGE = 3;
+}
+
+enum GameResourceKey
+{
+	USER_COUNT = 1;
+	ROOM_COUNT = 2;
+	PLAY_COUNT = 3;
+}
+
+message game_monitor_data
+{
+	1: required string machine_name;
+	2: map<HardwareResourceKey, int32> machine_resource_info;
+	3: map<GameResourceKey, int32> game_resource_info;
+}
+
+message monitor_data_req
+{
+}
+
+message monitor_data_ans
+{
+	1: required int16 result;
+	2: required game_monitor_data data;
+}

@@ -1,0 +1,62 @@
+
+import "common_def.dc"
+
+package protocol;
+
+enum grandprix_rank_type
+{
+	LEAGUE = 1;
+	GLOBAL = 2;	
+}
+
+enum grandprix_league
+{
+	ROOKIE = 1;
+	VETERAN = 2;
+	MASTER = 3;
+}
+
+message grandprix_info
+{
+	1: required int32 gp_point;
+	2: required int16 repeat_count;
+	3: required int64 reward_date;
+	4: required reward_info repeat_reward;
+	5: required grandprix_league league;
+	6: required uint64 my_rank;
+	7: required int32 my_rank_percentile;
+}
+
+message grandprix_rank_unit
+{
+	1: required uint64 player_no;
+	2: required uint64 rank;
+	3: required int16 nation_code;
+	4: required string nick; 
+	5: required int16 level;
+	6: required int32 gp_point;
+}
+
+message grandprix_info_req
+{
+}
+
+message grandprix_info_ans
+{
+	1: required int16 result;
+	2: required grandprix_info info;
+}
+
+message grandprix_rank_info_req
+{
+	1: required grandprix_rank_type rank_type;
+	2: required int64 begin_rank;
+	3: required int16 req_count;				// if begin_rank is 100 and req_count is 10, the response is 100~110 grandprix_rank_unit list (max:50)
+}
+
+message grandprix_rank_info_ans
+{
+	1: required int16 result;
+	2: required grandprix_rank_type rank_type;
+	3: sequence grandprix_rank_unit infos;
+}

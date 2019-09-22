@@ -1,0 +1,52 @@
+import "common_def.dc"
+
+package protocol;
+
+enum mission_data_key
+{
+	QUICK_MATCH_COUNT = 1;
+	GRANDPRIX_COUNT = 2;
+
+}
+
+message daily_mission_info
+{
+	1: required int32 mission_id;
+	2: required mission_data_key data_key;
+	3: required int16 progress;
+	4: required int16 goal;
+	5: required bool receive_reward;
+	6: required reward_info reward;
+}
+
+message daily_mission_list
+{
+	1: sequence daily_mission_info infos;
+}
+
+message daily_mission_list_req
+{
+	
+}
+
+message daily_mission_list_ans
+{
+	1: required int16 result;
+	2: required daily_mission_list infos;
+}
+
+message daily_mission_receive_reward_req
+{
+	1: required int32 mission_id;
+}
+
+message daily_mission_receive_reward_ans
+{
+	1: required int16 result;
+	2: required reward_info reward;
+}
+
+message daily_mission_accomplished_notify
+{
+	1: required int32 mission_id;
+}

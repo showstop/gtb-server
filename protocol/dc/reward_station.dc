@@ -1,0 +1,77 @@
+import "common_def.dc"
+
+package protocol;
+
+
+message reward_station_info
+{
+	1: required reward_info video_ad;
+	2: required int64 next_video_ad_time;
+	3: required reward_info fb_post;
+	4: required int64 next_fb_post;
+	5: required reward_info fb_invite;
+	6: required reward_info gold_bonus;
+	7: required int64 next_gold_bonus;
+}
+
+message reward_station_info_req
+{
+}
+
+message reward_station_info_ans
+{
+	1: required int16 result;
+	2: required reward_station_info info;
+}
+
+message reward_station_video_ad_req
+{
+}
+
+message reward_station_video_ad_ans
+{
+	1: required int16 result;
+}
+
+message reward_station_video_ad_complete_req
+{
+}
+
+message reward_station_video_ad_complete_ans
+{
+	1: required int16 result;
+	2: required asset_info updated_asset_info;
+}
+
+message reward_station_fb_post_req
+{ 
+}
+
+message reward_station_fb_post_ans
+{
+	1: required int16 result;
+	2: required asset_info updated_asset_info;
+}
+
+message reward_station_fb_invite_req
+{
+	1: required uint64 fb_uuid;
+}
+
+message reward_station_fb_invite_ans
+{
+	1: required int16 result;
+	2: required asset_info updated_asset_info;
+}
+
+message reward_station_gold_bonus_req
+{
+	1: required bool use_dice;
+}
+
+message reward_station_gold_bonus_ans
+{
+	1: required int16 result;
+	2: required int16 acquired_gold;
+	3: required asset_info updated_asset_info;
+}

@@ -1,0 +1,51 @@
+import "common_def.dc"
+
+package protocol;
+
+enum PlayerState
+{
+	OFFLINE = 0;
+	IN_LOBBY = 1;
+	IN_SEARCHING = 2;
+	IN_PLAYING = 3;
+}
+
+message player_profile_info
+{
+	1: required uint64 player_no;
+	2: required string game_nick;
+	3: required int16 nation_code;
+	4: required uint16 player_level;
+	5: required int32 exp;
+	6: required int16 exp_gauge;
+	7: required int32 trophy;
+	8: required string options;
+}
+
+message player_record_info
+{
+
+}
+
+message player_profile_info_req
+{
+	1: required uint64 player_no;
+}
+
+message player_profile_info_ans
+{
+	1: required int16 result;
+	2: required player_profile_info info;
+}
+
+message update_player_profile_info_req
+{
+	1: required string game_nick;
+	2: required int16 nation_code;
+}
+
+message update_player_profile_info_ans
+{
+	1: required int16 result;
+	2: requred player_profile_info info;
+}

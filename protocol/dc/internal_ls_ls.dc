@@ -1,0 +1,19 @@
+import "common_def.dc"
+
+package protocol;
+
+
+// Host LS => xNet => other LS
+message internal_player_end_game_report_notify
+{
+	1: required GameMode mode;
+	2: required uint64 player_no;
+	3: required int32 vehicle_no;
+	4: required bool is_giveup;
+	5: required int8 final_rank;
+	6: required int32 inc_game_money;
+	7: required int32 inc_exp;
+	8: required int32 first_reward_stuff_id;
+	9: required int32 second_reward_stuff_id;
+	10: map<record_data_key, int32> play_data;
+}

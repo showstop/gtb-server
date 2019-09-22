@@ -1,0 +1,69 @@
+import "common_def.dc"
+import "player.dc"
+import "vehicle.dc"
+import "ability.dc"
+
+package protocol;
+
+// PS => LS
+message internal_register_ps_req
+{
+	1: required int32 ps_no;
+}
+
+message internal_register_ps_ans
+{
+	1: required int16 result;
+}
+
+message player_requisite_info
+{
+	1: required bool is_ai;
+	2: required player_profile_info profile;
+	3: required vehicle selected_car;
+	4: required ability_slot equipped_ability;
+	5: required ability_list abilities;
+	5: required match_item_info match_items;
+}
+
+// LS => PS
+message internal_start_game_req
+{
+	1: map<uint64, player_requisite_info> player_infos;
+}
+
+message internal_start_game_ans
+{
+	1: required int16 result;
+}
+
+// PS => LS
+message internal_player_end_game_report_req
+{
+	1: required uint64 player_no;
+	2: required int32 using_vehicle_no;
+	3: required bool giveup_game;
+	4: required int8 final_rank;
+	5: required int16 inc_game_money;
+	6: required int16 inc_player_exp;
+	7: map<record_data_key, int32> play_data;
+}
+
+message internal_player_end_game_report_ans
+{
+	1: required uint64 player_no;
+	2: required bool giveup_game;
+	3: required int8 final_rank;
+	4: required int32 first_acquired_stuff_id;
+	5: required int32 second_acquired_stuff_id;
+}
+
+message internal_end_game_req
+{
+	1: required int32 ps_no;
+}
+
+message internal_end_game_ans
+{
+	1: required int16 result;
+}

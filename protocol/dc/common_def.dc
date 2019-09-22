@@ -1,0 +1,135 @@
+
+package protocol;
+
+enum LoginType
+{
+	FACEBOOK = 1;
+	GOOGLE = 2;
+	
+	GUEST = 98;
+}
+
+enum TutorialProgress
+{
+	INITIALIZE = 0;
+	CONTROL_TUTORIAL_BEGIN = 1;
+	CONTROL_TUTORIAL_END = 2;
+	LOBBY_TUTORIAL_BEGIN = 3;
+	LOBBY_TUTORIAL_END = 4;
+	ALL_COMPLETE = 5;
+}
+
+enum GameMode
+{
+	QUICK = 1;
+	GRANDPRIX = 2;
+}
+
+enum RewardType
+{
+	GOLD = 1;
+	DIAMOND = 2;
+	QUICK_MATCH_TICKET = 3;
+	GRANDPRIX_TICKET = 4;
+	VEHICLE_SPECIFIC_CARD = 10;
+	VEHICLE_SELECT_CARD = 11;
+	VEHICLE_PICK_CARD = 12;
+	STUFF = 13;
+}
+
+message match_item_info
+{
+	1: map<int32, int16> infos;  // item_id, quantity
+}
+
+message reward_info
+{
+	1: required RewardType type;
+	2: required int32 specific_id;
+	3: required int32 quantity;
+}
+
+message server_address
+{
+	1: required string domain;
+	2: required uint16 port;
+}
+
+message asset_info
+{
+	1: required int32 gold;
+	2: required int32 diamond;
+	3: required int16 quick_ticket;
+	4: required int64 quick_timestamp;
+	5: required int16 grandprix_ticket;
+	6: requried int64 grandprix_timestamp;
+}
+
+enum record_data_key
+{
+	// SYSTEM 100~
+	LOGIN_COUNT = 101;	
+	FACEBOOK_POSTING = 102;
+	FACEBOOK_LIKE = 103;
+	FACEBOOK_FRIEND_INVITE = 104;
+	ACHIEVEMENT_COUNT = 105;
+
+
+	// GAME 1000~
+	ACQ_GOLD_MEDAL = 1001;
+	ACQ_SILVER_MEDAL = 1002;
+	ACQ_BRONZE_MEDAL = 1003;
+	RUNNING_DISTANCE = 1004;
+	
+	ACQ_GAME_MONEY = 1006;
+	PLAY_COUNT = 1007;
+	USE_ITEM_COUNT = 1008;
+	KNOCK_COUNT = 1009;
+	OVERWHELM_FIRST = 1010;
+	NARROW_SECOND = 1011;
+	CONTINUOUS_FIRST = 1012;
+	CONTINUOUS_LAST = 1013; 
+	NO_DEATH_GAME = 1014;
+	FRIEND_COUNT = 1015;
+	COLLECT_ACHIEVEMENT = 1016;
+	BUMP_ATTACK = 1017;
+	DEATH = 1018;
+	KILL = 1019;
+	TOTAL_PLAY_SEC = 1020;
+	USE_INGAME_ITEM = 1021;
+	ACQ_INGAME_ITEM = 1022;
+	QUICK_MATCH_PLAY_COUNT = 1023;
+	QUICK_MATCH_PLAY_SEC = 1024;
+	GRANDPRIX_PLAY_COUNT = 1025;
+	GRANDPRIX_PLAY_SEC = 1026;
+	UPGRADE_VEHICLE = 1027;
+	PARTS_TUNING = 1028;
+	ACQ_NORMAL_STUFF = 1029;
+	ACQ_RARE_STUFF = 1030;
+	USE_GACHA_COUNT = 1031;
+	OPEN_LUCKY_BOX = 1032;
+	WATCH_VIDEO_AD_COUNT = 1033;
+	DEAL_DAMAGE = 1034;
+	TAKE_DAMAGE = 1035;
+
+
+
+	// for specific vehicle
+	DEFENSE_USING_BRAND_NEW = 11101;
+	TIME_REWIND = 11102;
+	USE_FROST = 11103;
+	USE_JACK_BOX = 11104;
+	USE_EMERGENCY = 11105;
+	USE_ARTISAN_HANDS = 11106;
+	USE_SIREN_BOOST = 11107;
+	USE_WATER_BOMB = 11108;
+	USE_DESTROYER = 11109;
+	ONE_SHOT_KILL = 11110;
+	USE_BARRICADE = 11111;
+	USE_RUN_AWAY = 11112;
+	DAMAGE_CHAINING_USING_LIGHTENING_CHAIN = 11113;
+	DEFENSE_USING_SPEEDING = 11114;
+
+
+
+}

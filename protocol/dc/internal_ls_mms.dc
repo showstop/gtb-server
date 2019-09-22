@@ -1,0 +1,78 @@
+import "player.dc"
+
+package protocol;
+
+// LS => xNet ==> MMS
+message internal_register_player_req
+{
+	1: required GameMode mode;
+	2: required player_profile_info info;
+	3: required match_item_info using_match_items;
+}
+
+message internal_register_player_ans
+{
+	1: required int16 result;
+	2: required int32 estimated_sec;
+	3: required uint64 dest_player_no;
+}
+
+// LS => xNet ==> MMS
+message internal_unregister_player_req
+{
+	1: required GameMode mode;
+	2: required uint64 player_no;
+}
+
+message internal_unregister_player_ans
+{
+	1: required int16 result;
+	2: required uint64 dest_player_no;
+}
+
+// MMS => xNet => LS
+message internal_match_player_info
+{
+	1: required bool is_ai;
+	2: sequence int8 binded_xNet_addr;
+}
+
+message internal_create_ps_req
+{
+	1: required GameMode mode;
+	2: required uint32 room_no;
+	3: map<uint64, internal_match_player_info> match_players;
+	4: required int32 map_no;
+}
+
+message internal_create_ps_ans
+{
+	1: required int16 result;
+	2: required GameMode mode;
+	3: required uint32 room_no;
+	4: required server_address ps_addr;
+}
+
+enum MatchState
+{
+	IDLE = 0;
+	SEARCHING = 1;
+	PREPARE_MATCHING = 2;
+	COMPLETE = 3;
+}
+
+// MMS => xNet => LS
+message internal_match_complete_notify
+{
+	1: required int16 result;
+	2: required uint64 dest_player_no; 
+	3: map<uint64, bool> player_list;
+	4: required GameMode mode;
+	5: required bool use_standalone;
+	6: required int32 map_no;
+	7: required server_address ps_addr;
+	8: required match_item_info using_match_items;
+}
+
+
+

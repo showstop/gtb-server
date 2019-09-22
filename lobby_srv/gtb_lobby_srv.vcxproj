@@ -1,0 +1,358 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D099385A-D65C-432B-809D-E0A53B2985CC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gtb_lobby_srv</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>bin\</OutDir>
+    <IntDir>tmp\</IntDir>
+    <TargetName>GTB.LobbyServer_D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../include;../;../../../../ext_lib/boost_1_60_0;../../../../ext_lib/springcat-1.9/include;../../../../ext_lib/cryptopp561;../../../../ext_lib/curl-7.31.0/include;../../../../xNet/client/src/APIs;../../../../xNet/include;../../../../xNet/protocol</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../../../ext_lib/springcat-1.9/lib/windows/x64;../lib/x64;../../../../ext_lib/curl-7.31.0/openssl-1.0.1e/lib/VC;../../../../ext_lib/curl-7.31.0/export_libs/win64;../../../../ext_lib/cryptopp561/x64/output;../../../../xNet/client/lib;../../../../ext_lib/Connector.C++ 1.1/lib/opt;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cryptlib_d.lib;libcurl_d.lib;ws2_32.lib;libeay32MT.lib;ssleay32MT.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\include\json\json_reader.cpp" />
+    <ClCompile Include="..\include\json\json_value.cpp" />
+    <ClCompile Include="..\include\json\json_writer.cpp" />
+    <ClCompile Include="..\include\util\Base64.cpp" />
+    <ClCompile Include="..\include\util\db_connection.cpp" />
+    <ClCompile Include="..\include\util\db_odbc.cpp" />
+    <ClCompile Include="..\include\util\IniFileConfig.cpp" />
+    <ClCompile Include="..\include\util\log_sender.cpp" />
+    <ClCompile Include="..\include\util\md5.cpp" />
+    <ClCompile Include="..\include\util\nt_service_process.cpp" />
+    <ClCompile Include="..\include\util\timer_queue.cpp" />
+    <ClCompile Include="..\include\util\web_client.cpp" />
+    <ClCompile Include="..\protocol\ability.dc.cpp" />
+    <ClCompile Include="..\protocol\achievement.dc.cpp" />
+    <ClCompile Include="..\protocol\attendance.dc.cpp" />
+    <ClCompile Include="..\protocol\auth.dc.cpp" />
+    <ClCompile Include="..\protocol\common_def.dc.cpp" />
+    <ClCompile Include="..\protocol\daily_mission.dc.cpp" />
+    <ClCompile Include="..\protocol\dev_test.dc.cpp" />
+    <ClCompile Include="..\protocol\grandprix.dc.cpp" />
+    <ClCompile Include="..\protocol\internal_as_ls.dc.cpp" />
+    <ClCompile Include="..\protocol\internal_log.dc.cpp" />
+    <ClCompile Include="..\protocol\internal_ls_ls.dc.cpp" />
+    <ClCompile Include="..\protocol\internal_ls_mms.dc.cpp" />
+    <ClCompile Include="..\protocol\internal_ls_ps.dc.cpp" />
+    <ClCompile Include="..\protocol\internal_resource_report.dc.cpp" />
+    <ClCompile Include="..\protocol\lobby.dc.cpp" />
+    <ClCompile Include="..\protocol\player.dc.cpp" />
+    <ClCompile Include="..\protocol\reward_station.dc.cpp" />
+    <ClCompile Include="..\protocol\vehicle.dc.cpp" />
+    <ClCompile Include="src\gc_network\dev_put_vehicle_card_req_job.cpp" />
+    <ClCompile Include="src\gc_network\dev_put_vehicle_stuff_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_ability_acquire_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_ability_equip_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_ability_list_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_ability_slot_open_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_acceptor.cpp" />
+    <ClCompile Include="src\gc_network\gc_achievement_list_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_achievement_receive_reward_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_asset_info_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_attendance_list_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_attendance_receive_reward_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_connect_lobby_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_daily_mission_list_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_daily_mission_receive_reward_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_first_vehicle_select_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_grandprix_info_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_grandprix_rank_info_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_match_start_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_match_info_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_match_item_buy_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_match_stop_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_player_profile_info_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_tutorial_progress_update_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_vehicle_list_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_vehicle_select_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_update_player_profile_info_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_vehicle_parts_tuning_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_vehicle_upgrade_req_job.cpp" />
+    <ClCompile Include="src\logic\lobby_server.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\player\ability_agent.cpp" />
+    <ClCompile Include="src\player\ability_dbo.cpp" />
+    <ClCompile Include="src\player\achievement_agent.cpp" />
+    <ClCompile Include="src\player\achievement_dbo.cpp" />
+    <ClCompile Include="src\player\asset_agent.cpp" />
+    <ClCompile Include="src\player\asset_dbo.cpp" />
+    <ClCompile Include="src\player\attendance_agent.cpp" />
+    <ClCompile Include="src\player\attendance_dbo.cpp" />
+    <ClCompile Include="src\player\daily_mission_agent.cpp" />
+    <ClCompile Include="src\player\daily_mission_dbo.cpp" />
+    <ClCompile Include="src\player\grandprix_agent.cpp" />
+    <ClCompile Include="src\player\grandprix_dbo.cpp" />
+    <ClCompile Include="src\player\player.cpp" />
+    <ClCompile Include="src\player\player_dbo.cpp" />
+    <ClCompile Include="src\player\repository.cpp" />
+    <ClCompile Include="src\player\vehicle_agent.cpp" />
+    <ClCompile Include="src\player\vehicle_dbo.cpp" />
+    <ClCompile Include="src\playserver\process_util.cpp" />
+    <ClCompile Include="src\playserver\ps_agent.cpp" />
+    <ClCompile Include="src\playserver\ps_manager.cpp" />
+    <ClCompile Include="src\ps_network\ps_acceptor.cpp" />
+    <ClCompile Include="src\ps_network\ps_internal_end_game_req_job.cpp" />
+    <ClCompile Include="src\ps_network\ps_internal_player_end_game_report_req_job.cpp" />
+    <ClCompile Include="src\ps_network\ps_internal_register_ps_req_job.cpp" />
+    <ClCompile Include="src\ps_network\ps_internal_start_game_ans_job.cpp" />
+    <ClCompile Include="src\registry\ability_registry.cpp" />
+    <ClCompile Include="src\registry\achievement_registry.cpp" />
+    <ClCompile Include="src\registry\attendance_registry.cpp" />
+    <ClCompile Include="src\registry\config_registry.cpp" />
+    <ClCompile Include="src\registry\daily_mission_registry.cpp" />
+    <ClCompile Include="src\registry\vehicle_parts_registry.cpp" />
+    <ClCompile Include="src\registry\vehicle_registry.cpp" />
+    <ClCompile Include="src\sysutil\system_info_util_linux.cpp" />
+    <ClCompile Include="src\sysutil\system_info_util_win.cpp" />
+    <ClCompile Include="src\sysutil\wmi.cpp" />
+    <ClCompile Include="src\test\unit_test.cpp" />
+    <ClCompile Include="src\xNet_network\internal_player_end_game_report_notify_job.cpp" />
+    <ClCompile Include="src\xNet_network\xNet_gateway.cpp" />
+    <ClCompile Include="src\xNet_network\xNet_internal_create_ps_req_job.cpp" />
+    <ClCompile Include="src\xNet_network\xNet_internal_login_req_job.cpp" />
+    <ClCompile Include="src\xNet_network\xNet_internal_match_complete_notify_job.cpp" />
+    <ClCompile Include="src\xNet_network\xNet_internal_register_player_ans_job.cpp" />
+    <ClCompile Include="src\xNet_network\xNet_internal_unregister_player_ans_job.cpp" />
+    <ClCompile Include="src\xNet_network\xNet_monitor_data_req_job.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\common\error_code.h" />
+    <ClInclude Include="..\include\common\server_consts.h" />
+    <ClInclude Include="..\include\json\assertions.h" />
+    <ClInclude Include="..\include\json\autolink.h" />
+    <ClInclude Include="..\include\json\config.h" />
+    <ClInclude Include="..\include\json\features.h" />
+    <ClInclude Include="..\include\json\forwards.h" />
+    <ClInclude Include="..\include\json\json.h" />
+    <ClInclude Include="..\include\json\json_tool.h" />
+    <ClInclude Include="..\include\json\reader.h" />
+    <ClInclude Include="..\include\json\value.h" />
+    <ClInclude Include="..\include\json\version.h" />
+    <ClInclude Include="..\include\json\writer.h" />
+    <ClInclude Include="..\include\util\Base64.h" />
+    <ClInclude Include="..\include\util\crash_handler.h" />
+    <ClInclude Include="..\include\util\db_connection.h" />
+    <ClInclude Include="..\include\util\db_odbc.h" />
+    <ClInclude Include="..\include\util\file_path_finder.h" />
+    <ClInclude Include="..\include\util\helper_util.h" />
+    <ClInclude Include="..\include\util\IniFileConfig.h" />
+    <ClInclude Include="..\include\util\log_sender.h" />
+    <ClInclude Include="..\include\util\md5.h" />
+    <ClInclude Include="..\include\util\nt_service_process.h" />
+    <ClInclude Include="..\include\util\random_util.h" />
+    <ClInclude Include="..\include\util\string_util.h" />
+    <ClInclude Include="..\include\util\timer_queue.h" />
+    <ClInclude Include="..\include\util\web_client.h" />
+    <ClInclude Include="..\protocol\ability.dc.h" />
+    <ClInclude Include="..\protocol\achievement.dc.h" />
+    <ClInclude Include="..\protocol\attendance.dc.h" />
+    <ClInclude Include="..\protocol\auth.dc.h" />
+    <ClInclude Include="..\protocol\common_def.dc.h" />
+    <ClInclude Include="..\protocol\daily_mission.dc.h" />
+    <ClInclude Include="..\protocol\dev_test.dc.h" />
+    <ClInclude Include="..\protocol\grandprix.dc.h" />
+    <ClInclude Include="..\protocol\internal_as_ls.dc.h" />
+    <ClInclude Include="..\protocol\internal_log.dc.h" />
+    <ClInclude Include="..\protocol\internal_ls_ls.dc.h" />
+    <ClInclude Include="..\protocol\internal_ls_mms.dc.h" />
+    <ClInclude Include="..\protocol\internal_ls_ps.dc.h" />
+    <ClInclude Include="..\protocol\internal_resource_report.dc.h" />
+    <ClInclude Include="..\protocol\lobby.dc.h" />
+    <ClInclude Include="..\protocol\player.dc.h" />
+    <ClInclude Include="..\protocol\reward_station.dc.h" />
+    <ClInclude Include="..\protocol\vehicle.dc.h" />
+    <ClInclude Include="src\env\config.h" />
+    <ClInclude Include="src\gc_network\gc_ability_handler.h" />
+    <ClInclude Include="src\gc_network\gc_acceptor.h" />
+    <ClInclude Include="src\gc_network\gc_achievement_handler.h" />
+    <ClInclude Include="src\gc_network\gc_attendance_handler.h" />
+    <ClInclude Include="src\gc_network\gc_daily_mission_handler.h" />
+    <ClInclude Include="src\gc_network\gc_dev_handler.h" />
+    <ClInclude Include="src\gc_network\gc_grandprix_handler.h" />
+    <ClInclude Include="src\gc_network\gc_handler.h" />
+    <ClInclude Include="src\gc_network\gc_lobby_handler.h" />
+    <ClInclude Include="src\gc_network\gc_player_handler.h" />
+    <ClInclude Include="src\gc_network\gc_vehicle_handler.h" />
+    <ClInclude Include="src\logic\lobby_server.h" />
+    <ClInclude Include="src\player\ability_agent.h" />
+    <ClInclude Include="src\player\achievement_agent.h" />
+    <ClInclude Include="src\player\asset_agent.h" />
+    <ClInclude Include="src\player\attendance_agent.h" />
+    <ClInclude Include="src\player\daily_mission_agent.h" />
+    <ClInclude Include="src\player\grandprix_agent.h" />
+    <ClInclude Include="src\player\player.h" />
+    <ClInclude Include="src\player\player_dbo.h" />
+    <ClInclude Include="src\player\repository.h" />
+    <ClInclude Include="src\player\vehicle_agent.h" />
+    <ClInclude Include="src\playserver\process_util.h" />
+    <ClInclude Include="src\playserver\ps_agent.h" />
+    <ClInclude Include="src\playserver\ps_manager.h" />
+    <ClInclude Include="src\ps_network\ps_acceptor.h" />
+    <ClInclude Include="src\ps_network\ps_handler.h" />
+    <ClInclude Include="src\registry\ability_registry.h" />
+    <ClInclude Include="src\registry\achievement_registry.h" />
+    <ClInclude Include="src\registry\attendance_registry.h" />
+    <ClInclude Include="src\registry\config_registry.h" />
+    <ClInclude Include="src\registry\daily_mission_registry.h" />
+    <ClInclude Include="src\registry\vehicle_parts_registry.h" />
+    <ClInclude Include="src\registry\vehicle_registry.h" />
+    <ClInclude Include="src\sysutil\system_info_util.h" />
+    <ClInclude Include="src\sysutil\wmi.hpp" />
+    <ClInclude Include="src\test\unit_test.h" />
+    <ClInclude Include="src\xNet_network\xNet_auth_handler.h" />
+    <ClInclude Include="src\xNet_network\xNet_gateway.h" />
+    <ClInclude Include="src\xNet_network\xNet_handler.h" />
+    <ClInclude Include="src\xNet_network\xNet_lobby_handler.h" />
+    <ClInclude Include="src\xNet_network\xNet_match_handler.h" />
+    <ClInclude Include="src\xNet_network\xNet_message_handler_itf.h" />
+    <ClInclude Include="src\xNet_network\xNet_monitor_handler.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\include\json\json_valueiterator.inl" />
+    <None Include="src\main_win_impl.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

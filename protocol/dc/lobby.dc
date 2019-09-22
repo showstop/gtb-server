@@ -1,0 +1,111 @@
+import "common_def.dc"
+import "player.dc"
+import "vehicle.dc"
+import "ability.dc"
+
+
+package protocol;
+
+message connect_lobby_req
+{
+	1: required int32 session_id;
+}
+
+message connect_lobby_ans
+{
+	1: required int16 result;
+	2: required uint64 player_no;
+}
+
+message tutorial_progress_update_req
+{
+	1: required TutorialProgress progress; 
+}
+
+message tutorial_progress_update_ans
+{
+	1: required int16 result;
+	2: required TutorialProgress progress; 
+}
+
+message first_vehicle_select_req
+{
+	1: required int32 selected_vehicle_no;
+}
+
+message first_vehicle_select_ans
+{
+	1: required int16 result;
+	2: required vehicle selected_vehicle;
+}
+
+message asset_info_req
+{
+	1: required uint64 player_no;
+}
+
+message asset_info_ans
+{
+	1: required int16 result;
+	2: required asset_info info;
+}
+
+message match_item_buy_req
+{
+	1: required int32 item_id;
+}
+
+message match_item_buy_ans
+{
+	1: required int16 result;
+	2: required match_item_info updated_match_items;
+	3: required asset_info updated_asset_info;
+}
+
+message match_info_req
+{
+	1: required GameMode mode;
+}
+
+message match_info_ans
+{
+	1: required int16 result;
+	2: sequence vehicle available;
+	3: sequence vehicle restricted;
+	4: required match_item_info match_items;
+}
+
+message match_start_req
+{
+	1: required GameMode mode;
+	2: required match_item_info using_match_items;
+}
+
+message match_start_ans
+{
+	1: required int16 result;
+	2: required int32 estimated_sec;
+}
+
+message match_stop_req
+{
+	1: required GameMode mode;
+}
+
+message match_stop_ans
+{
+	1: required int16 result;
+}
+
+message match_complete_notify
+{
+	1: required int16 result;
+	2: required GameMode mode;
+	3: required int32 map_no;
+	4: required bool use_standalone;
+	5: required server_address ps_addr;
+	6: map<uint64, player_profile_info> profiles;
+	7: map<uint64, vehicle> vehicles;
+	8: map<uint64, ability_slot> equipped_ability;
+	9: map<uint64, ability_list> abilities;
+}

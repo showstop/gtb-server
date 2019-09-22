@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2135FA4D-BA99-4761-99D7-6E8958988833}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gtb_auth_srv</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>bin\</OutDir>
+    <IntDir>tmp\</IntDir>
+    <TargetName>GTB.AuthServer_D</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;CURL_STATICLIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../include;../;../../../../ext_lib/boost_1_60_0;../../../../ext_lib/springcat-1.9/include;../../../../ext_lib/cryptopp561;../../../../ext_lib/curl-7.31.0/include;../../../../xNet/client/src/APIs;../../../../xNet/include</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../../../../ext_lib/springcat-1.9/lib/windows/x64;../lib/x64;../../../../ext_lib/curl-7.31.0/openssl-1.0.1e/lib/VC;../../../../ext_lib/curl-7.31.0/export_libs/win64;../../../../ext_lib/cryptopp561/x64/output;../../../../xNet/client/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cryptlib_d.lib;libcurl_d.lib;ws2_32.lib;libeay32MT.lib;ssleay32MT.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\include\json\json_reader.cpp" />
+    <ClCompile Include="..\include\json\json_value.cpp" />
+    <ClCompile Include="..\include\json\json_writer.cpp" />
+    <ClCompile Include="..\include\util\Base64.cpp" />
+    <ClCompile Include="..\include\util\db_connection.cpp" />
+    <ClCompile Include="..\include\util\db_odbc.cpp" />
+    <ClCompile Include="..\include\util\IniFileConfig.cpp" />
+    <ClCompile Include="..\include\util\log_sender.cpp" />
+    <ClCompile Include="..\include\util\md5.cpp" />
+    <ClCompile Include="..\include\util\nt_service_process.cpp" />
+    <ClCompile Include="..\include\util\timer_queue.cpp" />
+    <ClCompile Include="..\include\util\web_client.cpp" />
+    <ClCompile Include="..\protocol\auth.dc.cpp" />
+    <ClCompile Include="..\protocol\common_def.dc.cpp" />
+    <ClCompile Include="..\protocol\internal_as_ls.dc.cpp" />
+    <ClCompile Include="..\protocol\internal_log.dc.cpp" />
+    <ClCompile Include="src\gc_network\gc_acceptor.cpp" />
+    <ClCompile Include="src\gc_network\gc_link_table.cpp" />
+    <ClCompile Include="src\gc_network\gc_login_req_job.cpp" />
+    <ClCompile Include="src\gc_network\gc_session_key_req_job.cpp" />
+    <ClCompile Include="src\logic\auth_processor.cpp" />
+    <ClCompile Include="src\logic\auth_server.cpp" />
+    <ClCompile Include="src\logic\platform_facebook.cpp" />
+    <ClCompile Include="src\logic\platform_manager.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\xNet_network\xNet_gateway.cpp" />
+    <ClCompile Include="src\xNet_network\xNet_internal_login_ans_job.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\common\error_code.h" />
+    <ClInclude Include="..\include\common\server_consts.h" />
+    <ClInclude Include="..\include\json\assertions.h" />
+    <ClInclude Include="..\include\json\autolink.h" />
+    <ClInclude Include="..\include\json\config.h" />
+    <ClInclude Include="..\include\json\features.h" />
+    <ClInclude Include="..\include\json\forwards.h" />
+    <ClInclude Include="..\include\json\json.h" />
+    <ClInclude Include="..\include\json\json_tool.h" />
+    <ClInclude Include="..\include\json\reader.h" />
+    <ClInclude Include="..\include\json\value.h" />
+    <ClInclude Include="..\include\json\version.h" />
+    <ClInclude Include="..\include\json\writer.h" />
+    <ClInclude Include="..\include\util\Base64.h" />
+    <ClInclude Include="..\include\util\crash_handler.h" />
+    <ClInclude Include="..\include\util\db_connection.h" />
+    <ClInclude Include="..\include\util\db_odbc.h" />
+    <ClInclude Include="..\include\util\file_path_finder.h" />
+    <ClInclude Include="..\include\util\helper_util.h" />
+    <ClInclude Include="..\include\util\IniFileConfig.h" />
+    <ClInclude Include="..\include\util\log_sender.h" />
+    <ClInclude Include="..\include\util\md5.h" />
+    <ClInclude Include="..\include\util\nt_service_process.h" />
+    <ClInclude Include="..\include\util\random_util.h" />
+    <ClInclude Include="..\include\util\string_util.h" />
+    <ClInclude Include="..\include\util\timer_queue.h" />
+    <ClInclude Include="..\include\util\web_client.h" />
+    <ClInclude Include="..\protocol\auth.dc.h" />
+    <ClInclude Include="..\protocol\common_def.dc.h" />
+    <ClInclude Include="..\protocol\internal_as_ls.dc.h" />
+    <ClInclude Include="..\protocol\internal_log.dc.h" />
+    <ClInclude Include="src\env\config.h" />
+    <ClInclude Include="src\gc_network\gc_acceptor.h" />
+    <ClInclude Include="src\gc_network\gc_auth_handler.h" />
+    <ClInclude Include="src\gc_network\gc_handler.h" />
+    <ClInclude Include="src\gc_network\gc_link_table.h" />
+    <ClInclude Include="src\logic\auth_processor.h" />
+    <ClInclude Include="src\logic\auth_server.h" />
+    <ClInclude Include="src\logic\platform_facebook.h" />
+    <ClInclude Include="src\logic\platform_manager.h" />
+    <ClInclude Include="src\xNet_network\xNet_gateway.h" />
+    <ClInclude Include="src\xNet_network\xNet_handler.h" />
+    <ClInclude Include="src\xNet_network\xNet_lobby_handler.h" />
+    <ClInclude Include="src\xNet_network\xNet_message_handler_itf.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\include\json\json_valueiterator.inl" />
+    <None Include="src\main_win_impl.inl" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

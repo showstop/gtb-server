@@ -1,0 +1,72 @@
+import "common_def.dc"
+
+package protocol;
+
+
+message ability
+{
+	1: required int32 ability_id;
+	2: required int16 level;
+}
+
+enum ability_slot_no
+{
+	SLOT_1 = 1;
+	SLOT_2 = 2;
+	SLOT_3 = 3;
+}
+
+message ability_slot
+{
+	1: map<ability_slot_no, int32> slots;		// slot_no, ability_id(-1:locked)
+}
+
+message ability_list
+{
+	1: sequence ability infos;	
+}
+
+message ability_list_req
+{
+}
+
+message ability_list_ans
+{
+	1: required int16 result;
+	2: required ability_list infos;
+	3: required ability_slot slot;	
+}
+
+message ability_slot_open_req
+{
+	1: required ability_slot_no slot_no;
+}
+
+message ability_slot_open_ans
+{
+	1: required int16 result;
+	2: required ability_slot updated_slot;
+}
+
+message ability_equip_req
+{
+	1: required int32 ability_id;
+	2: required ability_slot_no slot_no;
+}
+
+message ability_equip_ans
+{
+	1: required int16 result;
+	2: required ability_slot updated_slot;
+}
+
+message ability_acquire_req
+{
+	2: required int32 ability_id;
+}
+
+message ability_acquire_ans
+{
+	1: required int16 result;
+	2: required ability updated_ability;
+}

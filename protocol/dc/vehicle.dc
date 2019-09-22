@@ -1,0 +1,112 @@
+import "common_def.dc"
+
+package protocol;
+
+enum vehicle_level
+{
+	LOCKED = 0;
+	D_CLASS = 1;
+	C_CLASS = 2;
+	B_CLASS = 3;
+	A_CLASS = 4;
+	S_CLASS = 5;
+}
+
+message vehicle_stat
+{
+	1: required int16 spd;
+	2: required int16 pow;
+	3: required int16 acc;
+	4: required int16 hp;
+}
+
+message vehicle_stuff
+{
+	1: map<int32, int32> stuff_info; 	// stuff_id, count
+}
+
+message vehicle_skill
+{
+	1: required int32 skill_id;
+	2: required int16 skill_lv;
+}
+
+enum vehicle_parts_id
+{
+	BATTERY = 1;
+	BODY_KIT = 2;
+	MOTOR = 3;
+	SUSPENSION = 4;
+}
+
+message vehicle_parts
+{
+	1: required vehicle_parts_id parts_id;
+	2: required int16 level;
+	3: required int16 exp;
+        4: map<int32, int16> need_stuffs;		// stuff_id, need_count
+}
+
+message vehicle
+{
+	1: required int32 vehicle_no;
+	2: required vehicle_level level;				
+	3: required int16 hold_card;					
+	4: sequence vehicle_skill skills;					
+	5: sequence vehicle_parts parts;		
+	6: required vehicle_stat stat;
+}
+
+message vehicle_list
+{
+	1: sequence vehicle infos;
+}
+
+message vehicle_list_req
+{
+	1: required uint64 player_no;
+}
+
+message vehicle_list_ans
+{
+	1: required int16 result;
+	2: required vehicle_list infos;
+	3: required int32 selected_vehicle_no;
+	4: required vehicle_stuff stuffs;
+}
+
+message vehicle_select_req
+{
+	1: required int32 vehicle_no;
+}
+
+message vehicle_select_ans
+{
+	1: required int16 result;
+	2: required int32 selected_vehicle_no;
+}
+
+message vehicle_upgrade_req
+{
+	1: required int32 vehicle_no;
+}
+
+message vehicle_upgrade_ans
+{
+	1: required int16 result;
+	2: required vehicle updated_vehicle;
+}
+
+message vehicle_parts_tuning_req
+{
+	1: required int32 vehicle_no;
+	2: required vehicle_parts_id parts_id;
+}
+
+message vehicle_parts_tuning_ans
+{
+	1: required int16 result;
+	2: required vehicle updated_vehicle;
+	3: required vehicle_stuff updated_stuffs;
+}
+

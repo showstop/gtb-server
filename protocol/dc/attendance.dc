@@ -1,0 +1,47 @@
+import "common_def.dc"
+
+package protocol;
+
+message attendance_info
+{
+	1: required int32 day_seq;			// if day_seq over 30, it means monthly reward info
+	2: required reward_info reward;
+	3: required bool receive_reward;
+	4: required bool complete;
+}
+
+message attendance_list
+{
+	1: sequence attendance_info infos;
+}
+
+message attendance_list_req
+{
+}
+
+message attendance_list_ans
+{
+	1: required int16 result;
+	2: required attendance_list infos;
+}
+
+message attendance_receive_reward_req
+{
+	1: required int32 day_seq;
+}
+
+message attendance_receive_reward_ans
+{
+	1: required int16 result;
+	2: required reward_info reward;
+}
+
+message attendance_monthly_reward_req
+{
+}
+
+message attendance_monthly_reward_ans
+{
+	1: required int16 result;
+	2: sequence reward_info rewards;
+}

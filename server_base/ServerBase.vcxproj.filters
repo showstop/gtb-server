@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="src\server_base.cpp" />
+    <ClCompile Include="src\acceptor_base.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\connector_base.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\link_base.cpp">
+      <Filter>Network</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logger.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="src\client_crypto.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+    <ClCompile Include="src\server_crypto.cpp">
+      <Filter>Crypto</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\ServerBase\acceptor_base.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ServerBase\connector_base.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ServerBase\link_base.h">
+      <Filter>Network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ServerBase\message_cut_filter.h">
+      <Filter>Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ServerBase\dispatcher.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ServerBase\io_handler.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ServerBase\message_executor.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ServerBase\logger.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ServerBase\protocol.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ServerBase\sb_define.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ServerBase\client_crypto.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ServerBase\server_crypto.h">
+      <Filter>Crypto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ServerBase\crypto_aes_filter.h">
+      <Filter>Filter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ServerBase\serverbase.h">
+      <Filter>Util</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Network">
+      <UniqueIdentifier>{95bccd31-9352-4505-80b1-dc01c95d78b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Filter">
+      <UniqueIdentifier>{68151757-a605-4e3a-8bce-98c6147b3751}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Util">
+      <UniqueIdentifier>{09c0e778-069f-425f-b7df-d4c229633938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log">
+      <UniqueIdentifier>{e7839b40-3d75-455e-9940-0eec63f3990f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Crypto">
+      <UniqueIdentifier>{440ba0e1-13a8-412a-9657-108238d435d4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

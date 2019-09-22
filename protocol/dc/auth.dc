@@ -1,0 +1,55 @@
+import "common_def.dc"
+
+package protocol;
+
+message session_key_req
+{
+}
+
+message session_key_ans
+{
+	1: sequence uint8 key;
+	2: sequence uint8 iv;
+}
+
+message login_req
+{
+	1: required LoginType login_type;
+	2: required int16 version;
+	
+	[max_length=1024]
+	3: required string acc_token;	
+}
+
+message login_ans
+{
+	1: required int16 result;
+	2: required int32 session_id;
+	3: required int64 server_timestamp;
+	4: required server_address assigned_ls_addr;
+	5: required TutorialProgress progress;
+}
+
+message logout_req
+{
+	1: required int32 session_id;
+}
+
+message logout_ans
+{
+	1: required int16 result;
+}
+
+message heartbeat
+{
+}
+
+message quit_req
+{
+}
+
+message quit_ans
+{
+	1: required int16 result;
+}
+

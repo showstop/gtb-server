@@ -1,0 +1,713 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Entry">
+      <UniqueIdentifier>{5ee14f78-169a-4d7f-ad95-54a1031fed33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{ca55fa59-c018-4900-ae31-f7768fd4367d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Env">
+      <UniqueIdentifier>{43f6cf1a-76c7-4fdd-bca2-e2ca79d3d46b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic">
+      <UniqueIdentifier>{3ace53a4-c878-4468-b17d-60f06f93600f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Gateway">
+      <UniqueIdentifier>{9f71d7a9-d9b5-449d-b7ac-bfd9afc2d8d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{a2d5f3db-e8a9-45d7-be26-c672b450754f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client">
+      <UniqueIdentifier>{0a176c68-a262-4794-9843-a54614029f79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client\Protocol">
+      <UniqueIdentifier>{52c16126-cac5-4bc0-bfee-e1effacef7de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client\Protocol\dc">
+      <UniqueIdentifier>{79c79e33-b148-4d07-b89c-2c86e2906a91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Util">
+      <UniqueIdentifier>{b630e970-c315-4a12-bc38-97df37df6555}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Util\json">
+      <UniqueIdentifier>{7f87d023-e05d-43ef-8aed-16a291d9bc74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{71350fd1-991c-4e42-976e-8d7ce1ac00ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Player">
+      <UniqueIdentifier>{ed6bd70c-43eb-43ed-8e38-d214e36438f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\xNet">
+      <UniqueIdentifier>{5a1faebc-f6b4-4ba3-9252-c7802b480429}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\xNet\Protocol">
+      <UniqueIdentifier>{ec56e55d-0a5b-47fe-a437-f68ef83eaeef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\xNet\Protocol\dc">
+      <UniqueIdentifier>{524c9d77-33fe-473f-ae0d-bd5dbbe9030d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Player\DB">
+      <UniqueIdentifier>{e83f7a40-9872-425d-8dda-bfa925e6fe1e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Registry">
+      <UniqueIdentifier>{1d294b5a-cb23-4d53-8711-3e2ca0b19e6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Util\sysutil">
+      <UniqueIdentifier>{b0b6d5f1-0647-4e9d-ad56-661044e53806}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client\Protocol\ability">
+      <UniqueIdentifier>{4830ae47-c4d2-4374-91c6-aac0ce9e88a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client\Protocol\player">
+      <UniqueIdentifier>{aef11ca9-d5c4-454c-950a-12f125f329f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client\Protocol\vehicle">
+      <UniqueIdentifier>{87ddf1aa-661b-4e39-8540-a611162e1cda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client\Protocol\lobby">
+      <UniqueIdentifier>{83b30781-5640-40fc-ba7b-0791fecb52b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client\Protocol\grandprix">
+      <UniqueIdentifier>{91fdf0fa-9b2c-4d31-a1b8-0848c617b101}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client\Protocol\dev">
+      <UniqueIdentifier>{770a7855-7316-4b4c-8292-ddb3a33c74d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client\Protocol\attendance">
+      <UniqueIdentifier>{ec1dad92-7c6d-4217-a09a-1bce5aa787ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client\Protocol\daily_mission">
+      <UniqueIdentifier>{d1b7ccdd-ea1b-4918-a5c0-812492387e9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client\Protocol\achievement">
+      <UniqueIdentifier>{ad4c0e17-3a43-40aa-bea1-95d5c32c2b3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\Client\Protocol\reward_station">
+      <UniqueIdentifier>{b9d11f8a-1d01-4e8f-aadf-52f3b7951064}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\xNet\Protocol\AuthServer">
+      <UniqueIdentifier>{dfe7cc76-13e4-4d41-ab96-22e8af8036c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\xNet\Protocol\MatchServer">
+      <UniqueIdentifier>{e0686b55-4613-4617-898f-54469073eabf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\xNet\Protocol\xNetControl">
+      <UniqueIdentifier>{94ac23df-c874-4f6e-ad7c-ff49a24d21ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\PlayServer">
+      <UniqueIdentifier>{e0cd40b8-f7bb-4346-ab6e-ae53a3ef0355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\PlayServer">
+      <UniqueIdentifier>{554c10d8-8c90-42e2-80ef-ace22e7175f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\PlayServer\Protocol">
+      <UniqueIdentifier>{2b312e78-300a-4a33-a05e-b553595ab433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\xNet\Protocol\LobbyServer">
+      <UniqueIdentifier>{2c3b10c3-37b2-439a-8730-c81e7696b1cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Test">
+      <UniqueIdentifier>{dacf9312-676c-43e7-a0c3-daf0694e8df4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Entry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logic\lobby_server.cpp">
+      <Filter>Logic\Gateway</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_acceptor.cpp">
+      <Filter>Network\Client</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\IniFileConfig.cpp">
+      <Filter>System\Env</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\json\json_reader.cpp">
+      <Filter>System\Util\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\json\json_value.cpp">
+      <Filter>System\Util\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\json\json_writer.cpp">
+      <Filter>System\Util\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\Base64.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\db_connection.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\md5.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\nt_service_process.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\timer_queue.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\web_client.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xNet_network\xNet_gateway.cpp">
+      <Filter>Network\xNet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\internal_log.dc.cpp">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\internal_as_ls.dc.cpp">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\common_def.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\player_dbo.cpp">
+      <Filter>Logic\Player\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\repository.cpp">
+      <Filter>Logic\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\lobby.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\player.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\player.cpp">
+      <Filter>Logic\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\log_sender.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\vehicle_dbo.cpp">
+      <Filter>Logic\Player\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="src\registry\vehicle_registry.cpp">
+      <Filter>Logic\Registry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\ability.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\auth.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\internal_ls_mms.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\internal_ls_ps.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\vehicle.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\asset_agent.cpp">
+      <Filter>Logic\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\asset_dbo.cpp">
+      <Filter>Logic\Player\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\vehicle_agent.cpp">
+      <Filter>Logic\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\internal_resource_report.dc.cpp">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sysutil\system_info_util_linux.cpp">
+      <Filter>System\Util\sysutil</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sysutil\system_info_util_win.cpp">
+      <Filter>System\Util\sysutil</Filter>
+    </ClCompile>
+    <ClCompile Include="src\sysutil\wmi.cpp">
+      <Filter>System\Util\sysutil</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_ability_list_req_job.cpp">
+      <Filter>Network\Client\Protocol\ability</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_asset_info_req_job.cpp">
+      <Filter>Network\Client\Protocol\lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_connect_lobby_req_job.cpp">
+      <Filter>Network\Client\Protocol\lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_player_profile_info_req_job.cpp">
+      <Filter>Network\Client\Protocol\player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_update_player_profile_info_req_job.cpp">
+      <Filter>Network\Client\Protocol\player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_ability_slot_open_req_job.cpp">
+      <Filter>Network\Client\Protocol\ability</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_ability_equip_req_job.cpp">
+      <Filter>Network\Client\Protocol\ability</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_ability_acquire_req_job.cpp">
+      <Filter>Network\Client\Protocol\ability</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\ability_agent.cpp">
+      <Filter>Logic\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_vehicle_upgrade_req_job.cpp">
+      <Filter>Network\Client\Protocol\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_vehicle_parts_tuning_req_job.cpp">
+      <Filter>Network\Client\Protocol\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_vehicle_list_req_job.cpp">
+      <Filter>Network\Client\Protocol\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_vehicle_select_req_job.cpp">
+      <Filter>Network\Client\Protocol\vehicle</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\dev_test.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\grandprix.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_grandprix_info_req_job.cpp">
+      <Filter>Network\Client\Protocol\grandprix</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_grandprix_rank_info_req_job.cpp">
+      <Filter>Network\Client\Protocol\grandprix</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\dev_put_vehicle_card_req_job.cpp">
+      <Filter>Network\Client\Protocol\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\dev_put_vehicle_stuff_req_job.cpp">
+      <Filter>Network\Client\Protocol\dev</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_match_item_buy_req_job.cpp">
+      <Filter>Network\Client\Protocol\lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_match_info_req_job.cpp">
+      <Filter>Network\Client\Protocol\lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_attendance_list_req_job.cpp">
+      <Filter>Network\Client\Protocol\attendance</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_attendance_receive_reward_req_job.cpp">
+      <Filter>Network\Client\Protocol\attendance</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_daily_mission_list_req_job.cpp">
+      <Filter>Network\Client\Protocol\daily_mission</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_daily_mission_receive_reward_req_job.cpp">
+      <Filter>Network\Client\Protocol\daily_mission</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_achievement_list_req_job.cpp">
+      <Filter>Network\Client\Protocol\achievement</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_achievement_receive_reward_req_job.cpp">
+      <Filter>Network\Client\Protocol\achievement</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\achievement.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\daily_mission.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\reward_station.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\db_odbc.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\attendance_dbo.cpp">
+      <Filter>Logic\Player\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\ability_dbo.cpp">
+      <Filter>Logic\Player\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\attendance_agent.cpp">
+      <Filter>Logic\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\attendance.dc.cpp">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\achievement_dbo.cpp">
+      <Filter>Logic\Player\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\achievement_agent.cpp">
+      <Filter>Logic\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\registry\achievement_registry.cpp">
+      <Filter>Logic\Registry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\registry\daily_mission_registry.cpp">
+      <Filter>Logic\Registry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\daily_mission_dbo.cpp">
+      <Filter>Logic\Player\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\daily_mission_agent.cpp">
+      <Filter>Logic\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_tutorial_progress_update_req_job.cpp">
+      <Filter>Network\Client\Protocol\lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_first_vehicle_select_req_job.cpp">
+      <Filter>Network\Client\Protocol\lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\grandprix_dbo.cpp">
+      <Filter>Logic\Player\DB</Filter>
+    </ClCompile>
+    <ClCompile Include="src\registry\config_registry.cpp">
+      <Filter>Logic\Registry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xNet_network\xNet_internal_login_req_job.cpp">
+      <Filter>Network\xNet\Protocol\AuthServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xNet_network\xNet_monitor_data_req_job.cpp">
+      <Filter>Network\xNet\Protocol\xNetControl</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xNet_network\xNet_internal_register_player_ans_job.cpp">
+      <Filter>Network\xNet\Protocol\MatchServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xNet_network\xNet_internal_unregister_player_ans_job.cpp">
+      <Filter>Network\xNet\Protocol\MatchServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xNet_network\xNet_internal_create_ps_req_job.cpp">
+      <Filter>Network\xNet\Protocol\MatchServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\playserver\ps_agent.cpp">
+      <Filter>Logic\PlayServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\playserver\ps_manager.cpp">
+      <Filter>Logic\PlayServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\playserver\process_util.cpp">
+      <Filter>Logic\PlayServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ps_network\ps_acceptor.cpp">
+      <Filter>Network\PlayServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ps_network\ps_internal_start_game_ans_job.cpp">
+      <Filter>Network\PlayServer\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ps_network\ps_internal_register_ps_req_job.cpp">
+      <Filter>Network\PlayServer\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ps_network\ps_internal_end_game_req_job.cpp">
+      <Filter>Network\PlayServer\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_match_start_req_job.cpp">
+      <Filter>Network\Client\Protocol\lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="src\gc_network\gc_match_stop_req_job.cpp">
+      <Filter>Network\Client\Protocol\lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xNet_network\xNet_internal_match_complete_notify_job.cpp">
+      <Filter>Network\xNet\Protocol\MatchServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\player\grandprix_agent.cpp">
+      <Filter>Logic\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\registry\ability_registry.cpp">
+      <Filter>Logic\Registry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\registry\attendance_registry.cpp">
+      <Filter>Logic\Registry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\registry\vehicle_parts_registry.cpp">
+      <Filter>Logic\Registry</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ps_network\ps_internal_player_end_game_report_req_job.cpp">
+      <Filter>Network\PlayServer\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xNet_network\internal_player_end_game_report_notify_job.cpp">
+      <Filter>Network\xNet\Protocol\LobbyServer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\internal_ls_ls.dc.cpp">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\test\unit_test.cpp">
+      <Filter>Logic\Test</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\env\config.h">
+      <Filter>System\Env</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logic\lobby_server.h">
+      <Filter>Logic\Gateway</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_acceptor.h">
+      <Filter>Network\Client</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_handler.h">
+      <Filter>Network\Client\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\IniFileConfig.h">
+      <Filter>System\Env</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\assertions.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\autolink.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\config.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\features.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\forwards.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\json.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\json_tool.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\reader.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\value.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\version.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\writer.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\Base64.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\crash_handler.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\db_connection.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\file_path_finder.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\helper_util.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\md5.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\nt_service_process.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\random_util.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\string_util.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\timer_queue.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\web_client.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\error_code.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\common\server_consts.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xNet_network\xNet_gateway.h">
+      <Filter>Network\xNet</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xNet_network\xNet_handler.h">
+      <Filter>Network\xNet\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\internal_log.dc.h">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xNet_network\xNet_message_handler_itf.h">
+      <Filter>Network\xNet\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\internal_as_ls.dc.h">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\player.h">
+      <Filter>Logic\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\common_def.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\player_dbo.h">
+      <Filter>Logic\Player\DB</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\repository.h">
+      <Filter>Logic\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\lobby.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\player.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\log_sender.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\registry\vehicle_registry.h">
+      <Filter>Logic\Registry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\ability.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\auth.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\internal_ls_mms.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\internal_ls_ps.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\vehicle.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\asset_agent.h">
+      <Filter>Logic\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\vehicle_agent.h">
+      <Filter>Logic\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\internal_resource_report.dc.h">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sysutil\system_info_util.h">
+      <Filter>System\Util\sysutil</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sysutil\wmi.hpp">
+      <Filter>System\Util\sysutil</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_ability_handler.h">
+      <Filter>Network\Client\Protocol\ability</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_lobby_handler.h">
+      <Filter>Network\Client\Protocol\lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_vehicle_handler.h">
+      <Filter>Network\Client\Protocol\vehicle</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_player_handler.h">
+      <Filter>Network\Client\Protocol\player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\ability_agent.h">
+      <Filter>Logic\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\dev_test.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\grandprix.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_grandprix_handler.h">
+      <Filter>Network\Client\Protocol\grandprix</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_dev_handler.h">
+      <Filter>Network\Client\Protocol\dev</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_attendance_handler.h">
+      <Filter>Network\Client\Protocol\attendance</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_daily_mission_handler.h">
+      <Filter>Network\Client\Protocol\daily_mission</Filter>
+    </ClInclude>
+    <ClInclude Include="src\gc_network\gc_achievement_handler.h">
+      <Filter>Network\Client\Protocol\achievement</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\achievement.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\daily_mission.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\reward_station.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\db_odbc.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\attendance_agent.h">
+      <Filter>Logic\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\attendance.dc.h">
+      <Filter>Network\Client\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\achievement_agent.h">
+      <Filter>Logic\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\registry\achievement_registry.h">
+      <Filter>Logic\Registry</Filter>
+    </ClInclude>
+    <ClInclude Include="src\registry\daily_mission_registry.h">
+      <Filter>Logic\Registry</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\daily_mission_agent.h">
+      <Filter>Logic\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\registry\config_registry.h">
+      <Filter>Logic\Registry</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xNet_network\xNet_auth_handler.h">
+      <Filter>Network\xNet\Protocol\AuthServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xNet_network\xNet_match_handler.h">
+      <Filter>Network\xNet\Protocol\MatchServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xNet_network\xNet_monitor_handler.h">
+      <Filter>Network\xNet\Protocol\xNetControl</Filter>
+    </ClInclude>
+    <ClInclude Include="src\playserver\ps_agent.h">
+      <Filter>Logic\PlayServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\playserver\ps_manager.h">
+      <Filter>Logic\PlayServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\playserver\process_util.h">
+      <Filter>Logic\PlayServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ps_network\ps_acceptor.h">
+      <Filter>Network\PlayServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ps_network\ps_handler.h">
+      <Filter>Network\PlayServer\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\player\grandprix_agent.h">
+      <Filter>Logic\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\registry\ability_registry.h">
+      <Filter>Logic\Registry</Filter>
+    </ClInclude>
+    <ClInclude Include="src\registry\attendance_registry.h">
+      <Filter>Logic\Registry</Filter>
+    </ClInclude>
+    <ClInclude Include="src\registry\vehicle_parts_registry.h">
+      <Filter>Logic\Registry</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xNet_network\xNet_lobby_handler.h">
+      <Filter>Network\xNet\Protocol\LobbyServer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\internal_ls_ls.dc.h">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\test\unit_test.h">
+      <Filter>Logic\Test</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\main_win_impl.inl">
+      <Filter>Entry</Filter>
+    </None>
+    <None Include="..\include\json\json_valueiterator.inl">
+      <Filter>System\Util\json</Filter>
+    </None>
+  </ItemGroup>
+</Project>

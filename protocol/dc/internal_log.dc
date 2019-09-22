@@ -1,0 +1,7 @@
+
+package protocol;
+
+message service_log
+{
+	1: required string log_msg;
+}

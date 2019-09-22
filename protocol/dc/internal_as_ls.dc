@@ -1,0 +1,20 @@
+import "common_def.dc"
+
+package protocol;
+
+// AS -> xNet -> LS
+message internal_login_req
+{
+	1: required uint64 player_no;
+	2: sequence uint8 key;
+	3: sequence uint8 iv;
+}
+
+// LS -> xNet -> AS
+message internal_login_ans
+{
+	1: required int16 result;
+	2: required uint64 player_no;
+	3: required int32 session_id;
+	4: required server_address ls_addr;
+}

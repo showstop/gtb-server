@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SpringCatConfig xmlns="http://springcat.net/SpringCatConfig.xsd">
+  <SpringCat ServiceName="xNetConnector"/>
+
+  <!-- Logger information -->
+  <Loggers>
+    <Logger Name="Error" LogLevel="ON"/>
+    <Logger Name="Process" LogLevel="ON"/>
+    <Logger Name="Debug" LogLevel="ON"/>
+    <Logger Name="Service" LogLevel="Trace"/>
+  </Loggers>
+
+  <!-- Appender information -->
+  <Appenders>
+    <Appender Name="FileAppender_Error" Type="BaseCat.Log.RollingFileAppender">
+      <AppenderParameter Name="LoggingDirectory" Value="./logs/error"/>
+      <AppenderParameter Name="Schedule" Value="Hourly"/>
+      <AppenderParameter Name="FileNamePrefix" Value="server_"/>
+      <AppenderParameter Name="FileNamePostfix" Value=".log"/>
+      <AppenderParameter Name="ImmediateFlush" Value="true"/>
+      <AppenderParameter Name="Append" Value="true"/>
+    </Appender>
+    
+    <Appender Name="FileAppender_Process" Type="BaseCat.Log.RollingFileAppender">
+      <AppenderParameter Name="LoggingDirectory" Value="./logs/process"/>
+      <AppenderParameter Name="Schedule" Value="Hourly"/>
+      <AppenderParameter Name="FileNamePrefix" Value="server_"/>
+      <AppenderParameter Name="FileNamePostfix" Value=".log"/>
+      <AppenderParameter Name="ImmediateFlush" Value="true"/>
+      <AppenderParameter Name="Append" Value="true"/>
+    </Appender>
+    
+    <Appender Name="FileAppender_Debug" Type="BaseCat.Log.RollingFileAppender">
+      <AppenderParameter Name="LoggingDirectory" Value="./logs/debug"/>
+      <AppenderParameter Name="Schedule" Value="Hourly"/>
+      <AppenderParameter Name="FileNamePrefix" Value="server_"/>
+      <AppenderParameter Name="FileNamePostfix" Value=".log"/>
+      <AppenderParameter Name="ImmediateFlush" Value="true"/>
+      <AppenderParameter Name="Append" Value="true"/>
+    </Appender>
+    
+     <Appender Name="FileAppender_Service" Type="BaseCat.Log.RollingFileAppender">
+      <AppenderParameter Name="LoggingDirectory" Value="./logs/service"/>
+      <AppenderParameter Name="Schedule" Value="Hourly"/>
+      <AppenderParameter Name="FileNamePrefix" Value="server_"/>
+      <AppenderParameter Name="FileNamePostfix" Value=".log"/>
+      <AppenderParameter Name="ImmediateFlush" Value="true"/>
+      <AppenderParameter Name="Append" Value="true"/>
+    </Appender>
+    
+    <Appender Name="ColoredConsoleAppender_Error" Type="BaseCat.Log.ColoredConsoleAppender">
+		 <AppenderParameter Name="LevelColors.Fatal" Value="Red | HighIntensity, Black"/>
+    </Appender>
+    
+     <Appender Name="ColoredConsoleAppender_Process" Type="BaseCat.Log.ColoredConsoleAppender">
+		 <AppenderParameter Name="LevelColors.Fatal" Value="Green | HighIntensity, Black"/>
+    </Appender>
+    
+     <Appender Name="ColoredConsoleAppender_Debug" Type="BaseCat.Log.ColoredConsoleAppender">
+		 <AppenderParameter Name="LevelColors.Fatal" Value="Cyan | HighIntensity, Black"/>
+    </Appender>
+    
+ 
+  </Appenders>
+
+  <!-- Layout information -->
+  <Layouts>
+    <Layout Name="Simple Layout" Type="BaseCat.Log.SimpleLayout"/>
+  </Layouts>
+
+  <!-- Logger binding information -->
+  <LoggerBindings>
+  	
+    <LoggerBinding LoggerRef="Service">
+  		<AppenderRef Name="FileAppender_Service"/>
+    </LoggerBinding>
+   <LoggerBinding LoggerRef="Error">
+      <AppenderRef Name="FileAppender_Error"/>
+      <AppenderRef Name="ColoredConsoleAppender_Error"/>
+    </LoggerBinding>
+    
+    <LoggerBinding LoggerRef="Process">
+      <AppenderRef Name="FileAppender_Process"/>
+      <AppenderRef Name="ColoredConsoleAppender_Process"/>
+    </LoggerBinding>
+    
+    <LoggerBinding LoggerRef="Debug">
+      <AppenderRef Name="FileAppender_Debug"/>
+      <AppenderRef Name="ColoredConsoleAppender_Debug"/>
+    </LoggerBinding>
+    
+  </LoggerBindings>
+
+  <!-- Appender binding information -->
+  <AppenderBindings>
+    <AppenderBinding AppenderRef="FileAppender_Error">
+      <LayoutRef Name="Simple Layout"/>
+    </AppenderBinding>
+    <AppenderBinding AppenderRef="FileAppender_Process">
+      <LayoutRef Name="Simple Layout"/>
+    </AppenderBinding>
+    <AppenderBinding AppenderRef="FileAppender_Debug">
+      <LayoutRef Name="Simple Layout"/>
+    </AppenderBinding>
+  <AppenderBinding AppenderRef="FileAppender_Service">
+      <LayoutRef Name="Simple Layout"/>
+    </AppenderBinding>
+    <AppenderBinding AppenderRef="ColoredConsoleAppender_Error">
+      <LayoutRef Name="Simple Layout"/>
+    </AppenderBinding>
+    <AppenderBinding AppenderRef="ColoredConsoleAppender_Process">
+      <LayoutRef Name="Simple Layout"/>
+    </AppenderBinding>
+    <AppenderBinding AppenderRef="ColoredConsoleAppender_Debug">
+      <LayoutRef Name="Simple Layout"/>
+    </AppenderBinding>
+   
+  </AppenderBindings>
+</SpringCatConfig>

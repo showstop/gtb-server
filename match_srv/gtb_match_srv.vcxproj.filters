@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>{14efb4c5-6b55-4046-b0ed-8bad175e4f75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entry">
+      <UniqueIdentifier>{5546f53b-e2cf-430d-89ef-df30f5ed51c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{0b7d2818-271a-4408-b94c-3ac6b4904d57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Env">
+      <UniqueIdentifier>{1afb79e3-0e87-46f5-8af4-b03919a17cc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Util">
+      <UniqueIdentifier>{db5fe3e2-0118-4ba6-a23e-ca8aa5ed6b2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Util\json">
+      <UniqueIdentifier>{a2d269de-026c-4bba-a96b-7273a8f55186}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic">
+      <UniqueIdentifier>{62377d4a-0f57-46e8-876a-2381b22c01c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\Gateway">
+      <UniqueIdentifier>{2191b8a3-b415-48cc-8c11-c680f785c5a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network">
+      <UniqueIdentifier>{e215f2e9-586c-4a1c-a138-85a5d2b6ecbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\xNet">
+      <UniqueIdentifier>{8a309d1f-737d-4ef8-a80c-b2c8ea299e9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\xNet\Protocol">
+      <UniqueIdentifier>{f34f705f-1293-475f-827f-fa2b880747e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\xNet\Protocol\dc">
+      <UniqueIdentifier>{e1c8ecee-9a27-414a-9dcd-4d67f716c063}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Network\LobbyServer">
+      <UniqueIdentifier>{b59ebd5c-a680-49a9-aa1b-6f31321c8821}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\MatchMaking">
+      <UniqueIdentifier>{b123c268-73ad-4262-8ed8-b131d6cb1fc6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\MatchMaking\Quick">
+      <UniqueIdentifier>{ba5b3c85-5669-4bbe-a3f4-e109ead2d933}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Logic\MatchMaking\Grandprix">
+      <UniqueIdentifier>{63d77bec-3920-43d0-ae22-298efeecefed}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>Entry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\IniFileConfig.cpp">
+      <Filter>System\Env</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\Base64.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\log_sender.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\md5.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\nt_service_process.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\timer_queue.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\web_client.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\json\json_reader.cpp">
+      <Filter>System\Util\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\json\json_value.cpp">
+      <Filter>System\Util\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\json\json_writer.cpp">
+      <Filter>System\Util\json</Filter>
+    </ClCompile>
+    <ClCompile Include="src\logic\match_server.cpp">
+      <Filter>Logic\Gateway</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\db_connection.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="..\include\util\db_odbc.cpp">
+      <Filter>System\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xNet_network\xNet_gateway.cpp">
+      <Filter>Network\xNet</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\common_def.dc.cpp">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\internal_log.dc.cpp">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\internal_ls_mms.dc.cpp">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\protocol\player.dc.cpp">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xNet_network\xNet_internal_register_player_req_job.cpp">
+      <Filter>Network\xNet\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xNet_network\xNet_internal_unregister_player_req_job.cpp">
+      <Filter>Network\xNet\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\xNet_network\xNet_internal_create_ps_ans_job.cpp">
+      <Filter>Network\xNet\Protocol</Filter>
+    </ClCompile>
+    <ClCompile Include="src\match\quick_match_pool.cpp">
+      <Filter>Logic\MatchMaking\Quick</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\main_win_impl.inl">
+      <Filter>Entry</Filter>
+    </None>
+    <None Include="..\include\json\json_valueiterator.inl">
+      <Filter>System\Util\json</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\env\config.h">
+      <Filter>System\Env</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\IniFileConfig.h">
+      <Filter>System\Env</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\Base64.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\crash_handler.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\file_path_finder.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\helper_util.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\log_sender.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\md5.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\nt_service_process.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\random_util.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\string_util.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\timer_queue.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\web_client.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\assertions.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\autolink.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\config.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\features.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\forwards.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\json.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\json_tool.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\reader.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\value.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\version.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\json\writer.h">
+      <Filter>System\Util\json</Filter>
+    </ClInclude>
+    <ClInclude Include="src\logic\match_server.h">
+      <Filter>Logic\Gateway</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\db_connection.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\util\db_odbc.h">
+      <Filter>System\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xNet_network\xNet_gateway.h">
+      <Filter>Network\xNet</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xNet_network\xNet_handler.h">
+      <Filter>Network\xNet\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="src\xNet_network\xNet_message_handler_itf.h">
+      <Filter>Network\xNet\Protocol</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\common_def.dc.h">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\internal_log.dc.h">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\internal_ls_mms.dc.h">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\protocol\player.dc.h">
+      <Filter>Network\xNet\Protocol\dc</Filter>
+    </ClInclude>
+    <ClInclude Include="src\match\quick_match_pool.h">
+      <Filter>Logic\MatchMaking\Quick</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

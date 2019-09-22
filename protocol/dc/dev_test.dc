@@ -1,0 +1,28 @@
+import "vehicle.dc"
+
+package dev;
+
+message put_vehicle_card_req
+{
+	1: required int32 vehicle_no;
+	2: required int32 quantity;
+}
+
+message put_vehicle_card_ans
+{
+	1: required int16 result;
+	2: required protocol.vehicle updated_vehicle; 
+}
+
+message put_vehicle_stuff_req
+{
+	1: required int32 stuff_id;
+	2: required int32 quantity;
+}
+
+message put_vehicle_stuff_ans
+{
+	
+	1: required int16 result;
+	3: required protocol.vehicle_stuff updated_stuffs;
+}

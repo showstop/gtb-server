@@ -1,0 +1,46 @@
+import "common_def.dc"
+
+package protocol;
+
+message achievement_info
+{
+	1: required int32 achievement_id;
+	2: required record_data_key record_key;
+	3: required int32 progress;
+	4: required int32 goal;
+	5: required bool receive_reward;
+	6: required reward_info reward;
+}
+
+message achievement_list
+{
+	1: sequence achievement_info infos;
+}
+
+message achievement_list_req
+{
+	
+}
+
+message achievement_list_ans
+{
+	1: required int16 result;
+	2: required achievement_list infos;
+}
+
+message achievement_receive_reward_req
+{
+	1: required int32 achievement_id;
+}
+
+message achievement_receive_reward_ans
+{
+	1: required int16 result;
+	2: required reward_info reward;
+	3: required achievement_info updated_info;
+}
+
+message achievement_accomplished_notify
+{
+	1: required int32 achievement_id;
+}
